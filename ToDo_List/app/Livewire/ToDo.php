@@ -31,6 +31,8 @@ class ToDo extends Component
     public function delete($todoId)
     {
         ToDo_list::find($todoId)->delete();
+        session()->flash('delete','deleted.');
+
     }
     public function render()
     {
